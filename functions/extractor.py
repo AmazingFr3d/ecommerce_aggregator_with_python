@@ -1,8 +1,10 @@
 from bs4 import BeautifulSoup
 from lxml import etree
 
+from functions import selectors as sel
 
-def extractor(page_html, prods_select: str, name: str, price: str, stars: str, img: str, url: str):
+
+def extractor(site_code: int, page_html: str):
     """
      This function accepts the page html along with specific selectors and returns
      a list of dict of all the scraped products
@@ -28,13 +30,20 @@ def extractor(page_html, prods_select: str, name: str, price: str, stars: str, i
     soup = BeautifulSoup(page_html, 'html.parser')
     dom = etree.HTML(str(soup))
     parsed = []
-    products = dom.xpath(prods_select)
+    i = 0
+    prods_select = sel.selectors(site_code)
+    products = dom.xpath(prods_select['prods'])
     for product in products:
-        parsed.append({
-            'Name': product.xpath(name),
-            'Price': product.xpath(price),
-            'Stars': product.xpath(stars),
-            'img_url': product.xpath(img),
-            'url': product.xpath(url)
-        })
+        i += 1
+        result = {
+            'Name': product.xpath(prods_select['name']),
+            'Price': " ".join(product.xpath(prods_select['price'])),
+            'Stars': product.xpath(prods_select['stars']),
+            # 'img_url': product.xpath(prods_select['img']),
+            # 'url': product.xpath(prods_select['url']),
+            'Platform': product.xpath(prods_select['platform'])
+        }
+        parsed.append(result)
+        if i == 15:
+            break
     return parsed
