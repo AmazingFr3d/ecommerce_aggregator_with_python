@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="384a61a8-0af9-4a7a-b52c-9022566123ef" name="Changes" comment="Second commit, created selectors.py, url_builder.py and run.py functions/modules">
-      <change afterPath="$PROJECT_DIR$/data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/csv_convert.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/data_clean.py" afterDir="false" />
+    <list default="true" id="384a61a8-0af9-4a7a-b52c-9022566123ef" name="Changes" comment="Third commit, created a data cleaning functions/modules and other data related functions">
+      <change afterPath="$PROJECT_DIR$/functions/currency_conv.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/extractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/locator.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/locator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/selectors.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/selectors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_clean.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_clean.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664310497350</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Third commit, created a data cleaning functions/modules and other data related functions">
+      <created>1664742615852</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664742615852</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +147,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit, worked on locator.py and extractor.py" />
     <MESSAGE value="Second commit, created selectors.py, url_builder.py and run.py functions/modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second commit, created selectors.py, url_builder.py and run.py functions/modules" />
+    <MESSAGE value="Third commit, created a data cleaning functions/modules and other data related functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Third commit, created a data cleaning functions/modules and other data related functions" />
   </component>
 </project>
