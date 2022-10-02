@@ -29,21 +29,27 @@ def extractor(site_code: int, page_html: str):
 
     soup = BeautifulSoup(page_html, 'html.parser')
     dom = etree.HTML(str(soup))
-    parsed = []
-    i = 0
+    # parsed = []
+
     prods_select = sel.selectors(site_code)
     products = dom.xpath(prods_select['prods'])
-    for product in products:
-        i += 1
-        result = {
-            'Name': product.xpath(prods_select['name']),
-            'Price': " ".join(product.xpath(prods_select['price'])),
-            'Stars': product.xpath(prods_select['stars']),
-            # 'img_url': product.xpath(prods_select['img']),
-            # 'url': product.xpath(prods_select['url']),
-            'Platform': product.xpath(prods_select['platform'])
-        }
-        parsed.append(result)
-        if i == 15:
-            break
-    return parsed
+
+    result = {
+
+        'name': dom.xpath(prods_select['name']),
+        # name = [n.text for n in name]
+
+        'price': dom.xpath(prods_select['price']),
+        # price = [p.text for p in price]
+
+        # 'stars': dom.xpath(prods_select['stars']),
+        # stars = [s.text for s in stars]
+        # stars = [ for s in stars]
+
+        # 'img_url': product.xpath(prods_select['img']),
+        # 'url': product.xpath(prods_select['url']),
+        'site': prods_select['site'],
+
+    }
+
+    return result

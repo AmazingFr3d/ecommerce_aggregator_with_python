@@ -2,23 +2,23 @@ def selectors(site_code: int):
     if site_code == 1:  # For Aliexpress.com
         details = {
             'prods': "//a[@class='_3t7zg _2f4Ho']",
-            'name': "//a[@class='_3t7zg _2f4Ho']/div[2]/div[1]/h1/text()",
-            'price': "//a[@class='_3t7zg _2f4Ho']/div[2]/div[2]/span/text()",
-            'stars': "//a[@class='_3t7zg _2f4Ho']/div[2]/div[4]/span[2]",
+            'name': "//a[@class='_3t7zg _2f4Ho']//h1[@class='_18_85']/text()",
+            'price': "//a[@class='_3t7zg _2f4Ho']//div[@class='mGXnE _37W_B']//text()",
+            'stars': "//a[@class='_3t7zg _2f4Ho']/div[2]/div[4]/span[2]//text()",
             'img': "//a[@class='_3t7zg _2f4Ho']/div/img/@src",
             'url': "//a[@class='_3t7zg _2f4Ho']/@href",
-            'platform': "aliexpress.com"
+            'site': "aliexpress.com"
         }
         return details
     elif site_code == 2:  # For Amazon.com
         details = {
             'prods': "//div[@data-component-type='s-search-result']",
-            'name': "//div[@data-component-type='s-search-result']//span[@class='a-size-medium a-color-base a-text-normal']",
-            'price': "//div[@data-component-type='s-search-result']//span[@class='a-offscreen xh-highlight']",
-            'stars': "//div[@data-component-type='s-search-result']//span[@class='a-icon-alt']",
+            'name': "//div[@data-component-type='s-search-result']//span[@class='a-size-medium a-color-base a-text-normal']/text()",
+            'price': "//div[@data-component-type='s-search-result']//span[@class='a-offscreen']/text()",
+            'stars': "//div[@data-component-type='s-search-result']//span[@class='a-icon-alt']/text()",
             'img': "//div[@data-component-type='s-search-result']//img",
             'url': "//div[@data-component-type='s-search-result']//a[@class='a-link-normal s-no-outline']/@href",
-            'platform': "amazon.com"
+            'site': "amazon.com"
         }
         return details
     elif site_code == 3:  # For Jumia.com
