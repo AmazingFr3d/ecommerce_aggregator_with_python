@@ -16,7 +16,7 @@ def selectors(site_code: int):
             'name': "//div[@data-component-type='s-search-result']//span[@class='a-size-medium a-color-base a-text-normal']/text()",
             'price': "//div[@data-component-type='s-search-result']//span[@class='a-offscreen']/text()",
             'stars': "//div[@data-component-type='s-search-result']//span[@class='a-icon-alt']/text()",
-            'img': "//div[@data-component-type='s-search-result']//img",
+            'img': "//div[@data-component-type='s-search-result']//img/@src",
             'url': "//div[@data-component-type='s-search-result']//a[@class='a-link-normal s-no-outline']/@href",
             'site': "amazon.com"
         }

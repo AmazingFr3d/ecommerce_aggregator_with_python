@@ -46,8 +46,8 @@ def extractor(site_code: int, page_html: str):
         # stars = [s.text for s in stars]
         # stars = [ for s in stars]
 
-        # 'img_url': product.xpath(prods_select['img']),
-        # 'url': product.xpath(prods_select['url']),
+        'img_url': dom.xpath(prods_select['img']),
+        'url': dom.xpath(prods_select['url']),
         'site': prods_select['site'],
 
     }
