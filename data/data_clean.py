@@ -18,7 +18,11 @@ def dataframes(site_code: int, data):
         amazon['price'] = amazon['price'].str.replace(',', '')
         amazon['price'] = amazon['price'].str.replace(' ', '')
         amazon['price'] = amazon['price'].astype(float)
-        amazon['price'] = amazon['price'] * cc.convert()
+        if cc.convert():
+            amazon['price'] = amazon['price'] * cc.convert()
+        else:
+            amazon['price'] = amazon['price'] * 1
+
         amazon['price'] = amazon['price'].round(2)
         amazon['url'] = "https://www.amazon.com" + amazon['url']
 
@@ -32,6 +36,6 @@ def dataframes(site_code: int, data):
         jumia['price'] = jumia['price'].str.replace(',', '')
         jumia['price'] = jumia['price'].str.replace(' ', '')
         jumia['price'] = jumia['price'].astype(float)
-        jumia['url'] = "https://www.jumia.com.ng" + jumia['url']
+        jumia['url'] = "https://www.jumia.com.ng/" + jumia['url']
 
         return jumia
